@@ -19,15 +19,15 @@ def populate():
        {'title':'Official Django Tutorial',
        'url':'https://docs.djangoproject.com/en/2.1/intro/tutorial01/','views':32},
        {'title':'Django Rocks',
-       'url':'http://www.djangorocks.com/','views':16},
+       'url':'http://www.djangorocks.com/','views':1678},
        {'title':'How to Tango with Django',
-       'url':'http://www.tangwithdjango.com/','views':8}]
+       'url':'http://www.tangowithdjango.com/','views':8896}]
     
     other_pages = [
         {'title':'Bottle',
-        'url':'http//bottlepy.org/docs/dev/','views':32},
+        'url':'http//bottlepy.org/docs/dev/','views':87},
         {'title':'Flask',
-        'url':'http://flask.pocoo.org','views':16} ]
+        'url':'http://flask.pocoo.org','views':79}]
     
     cats = {'Python': {'pages':  python_pages, 'views': 128, 'likes': 64},
         'Django': {'pages': django_pages, 'views':64, 'likes':32},
@@ -51,8 +51,8 @@ def add_page(cat,title,url,views=0):
     p.save()
     return p
 
-def add_cat(name,views=0,likes=0):
-    c = Category.objects.get_or_create(name=name)[0]
+def add_cat(name,views=0,likes=0, slug=0):
+    c = Category.objects.get_or_create(name=name,views=views,likes=likes)[0]
     c.views = views
     c.likes = likes
     c.save()
