@@ -1,12 +1,8 @@
-#import the Page model
-from rango.models import Page
-
 from django.shortcuts import render
-
 from django.http import HttpResponse
-#import the Category model
+#import the Page and Categories models
 from rango.models import Category
-
+from rango.models import Page
 
 def index(request):
     #Query database for alist of ALL categories currently stored
@@ -19,7 +15,6 @@ def index(request):
     
     context_dict={}
     context_dict['boldmessage']='Crunchy, creamy, cookie, candy, cupcake!'
-    
     context_dict['categories']=category_list
     context_dict['pages'] = page_list
 
@@ -28,8 +23,8 @@ def index(request):
     
 
 def about(request):
-    context_dict = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
-    return render(request, 'rango/about.html', context=context_dict)
+    #context_dict = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
+    return render(request, 'rango/about.html')
 
 def show_category(request, category_name_slug):
     #Create a context dictionary to pass to the template rendering engine
