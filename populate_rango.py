@@ -9,15 +9,15 @@ from rango.models import Category, Page
 def populate():
     python_pages = [
         {'title':'Official Python Tutorial',
-        'url':'http://docs.python.org/3/tutorial/', 'views':32},
+        'url':'http://docs.python.org/3/tutorial/', 'views':324},
         {'title':'How to Think like a Computer Scientist',
-        'url':'http://greenteapress/thinkpython/','views':16},
+        'url':'http://www.greenteapress.com/thinkpython/','views':543},
         {'title':'Learn Python in 10 Minutes',
-        'url':'http://ww.korokithakis.net/tutorials/python/','views':8} ] 
+        'url':'http://www.korokithakis.net/tutorials/python/','views':4} ] 
 
     django_pages = [
        {'title':'Official Django Tutorial',
-       'url':'https://docs.djangoproject.com/en/2.1/intro/tutorial01/','views':32},
+       'url':'https://docs.djangoproject.com/en/2.1/intro/tutorial01/','views':392},
        {'title':'Django Rocks',
        'url':'http://www.djangorocks.com/','views':1678},
        {'title':'How to Tango with Django',
